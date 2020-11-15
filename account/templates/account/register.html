@@ -3,11 +3,13 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-	<div style="margin: 10vh 75vh;"> 
-	  <form method="post">
-	    {% csrf_token %}
-	    {{ registration_form|crispy }}
-	    <button type="submit" class="btn btn-primary">Sign in</button>
-	  </form>
-	</div> 
+<div style="margin: 10vh 80vh">
+  <form method="post">
+    {% csrf_token %}
+    {{ registration_form|crispy }}
+    <button type="submit" class="btn btn-primary">Sign in</button>
+  </form>
+</div>
 {% endblock %}
+
+  <!--- css code in register-style.css --->
