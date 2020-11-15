@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+    <div class="container">
+        <a href="/" class="navbar-brand">illusha's blog</a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav">
+                <a href="#" class="nav-item nav-link">News</a>
+                <a href="#" class="nav-item nav-link">Coronavirus</a>
+            </div>
+            {% if request.user.is_authenticated %}
+            <div class="navbar-nav ml-auto">
+                <a href="logout/" class="nav-item nav-link">Profile</a>
+                <a href="#" class="nav-item nav-link">Log out</a>
+            </div>
+            {% else %}
+            <div class="navbar-nav ml-auto">
+                <a href="#" class="nav-item nav-link">Login</a>
+                <a href="register/" class="nav-item nav-link">Register</a>
+            </div>
+            {% endif %}
+        </div>
+    </div>   
+</nav>
