@@ -35,6 +35,14 @@
                                         </div>
                                     {% endif %}       
                                 </div>
+                                <div>
+                                    {% if login_form.non_fieled_errors %}
+                                        <div  class="form-group row" style="color:red; padding-left: 50vh">
+                                            <p style="margin-bottom: 0.01vh;">{{login_form.non_fieled_errors}}
+                                            </p>
+                                        </div>
+                                    {% endif %}
+                                </div>
                                     <div class="col-md-6 offset-md-4" >
                                         <button type="submit" class="btn btn-primary">
                                         Login
