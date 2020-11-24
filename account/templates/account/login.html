@@ -1,12 +1,12 @@
-{% extends 'base.html' %}
+{% extends 'base2.html' %}
 
 
 {% block content %}
 
-<form class="my-form" style="margin-top: 10vh; margin-bottom:25vh; " method="post">{% csrf_token %}
+<form class="my-form" style="margin-top: 20vh;" method="post">{% csrf_token %}
     <div class="cotainer">
         <div class="row justify-content-center">
-            <div class="col-md-6">
+            <div class="col-md-8">
                     <div class="card">
                         <div class="card-header">Log in</div>
                         <div class="card-body">
@@ -36,10 +36,9 @@
                                     {% endif %}       
                                 </div>
                                 <div>
-                                    {% if login_form.non_fieled_errors %}
+                                    {% if login_form.non_field_errors %}
                                         <div  class="form-group row" style="color:red; padding-left: 50vh">
-                                            <p style="margin-bottom: 0.01vh;">{{login_form.non_fieled_errors}}
-                                            </p>
+                                            {{login_form.non_field_errors}}
                                         </div>
                                     {% endif %}
                                 </div>
