@@ -61,6 +61,7 @@ def account_view(request):
 		form = AccountUpdateForm(request.POST, instance = request.user)
 		if form.is_valid():
 			form.save()
+			context['success_message'] = 'Updated'
 	else:
 		form = AccountUpdateForm(
 			initial = {

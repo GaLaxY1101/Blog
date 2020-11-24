@@ -12,13 +12,13 @@
             </div>
             {% if request.user.is_authenticated %}
             <div class="navbar-nav ml-auto">
-                <a href="{% url 'account' %}" class="nav-item nav-link">Profile</a>
-                <a href="{% url 'logout' %}" class="nav-item nav-link">Log out</a>
+                <a href="{% url 'account' %}" class="nav-item nav-link text-dark">Profile</a>
+                <a href="{% url 'logout' %}" class="nav-item nav-link text-dark">Log out</a>
             </div>
             {% else %}
             <div class="navbar-nav ml-auto">
-                <a href="{% url 'login' %}" class="nav-item nav-link">Login</a>
-                <a href="{% url 'register' %}" class="nav-item nav-link">Register</a>
+                <a href="{% url 'login' %}" class="nav-item nav-link text-dark">Login</a>
+                <a href="{% url 'register' %}" class="nav-item nav-link text-dark">Register</a>
             </div>
             {% endif %}
         </div>
