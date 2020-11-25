@@ -5,18 +5,7 @@ from django.contrib.auth import authenticate
 from account.models import Account
 
 class RegistrationForm(UserCreationForm):
-	email = forms.CharField(max_length=60, widget = 
-	forms.TextInput(attrs={'type':'text', 'id':'email', 'class':'form-control', 'name':'email'}))
-
-	username = forms.CharField(max_length=60, widget = 
-	forms.TextInput(attrs={'type':'text', 'id':'user_name', 'class':'form-control', 'name':'username'}))
-	
-	password1 = forms.CharField(max_length=60, widget = 
-	forms.TextInput(attrs={'type':'password', 'id':'password_1', 'class':'form-control', 'name':'password1'}))
-
-	password2 = forms.CharField(max_length=60, widget = 
-	forms.TextInput(attrs={'type':'password', 'id':'password_2', 'class':'form-control', 'name':'password2'}))
-
+	email = forms.CharField(max_length=60)
 
 	class Meta:
 		model = Account	
@@ -26,9 +15,6 @@ class AccountAuthenticationForm(forms.ModelForm):
 
 	email = forms.CharField(max_length=60, widget = 
 	forms.TextInput(attrs={'type':'text', 'id':'email', 'class':'form-control', 'name':'email'}))
-	
-	password = forms.CharField(max_length=60, widget = 
-	forms.TextInput(attrs={'type':'password', 'id':'password_1', 'class':'form-control', 'name':'password'}))
 
 	class Meta:
 		model = Account
@@ -44,9 +30,6 @@ class AccountAuthenticationForm(forms.ModelForm):
 class AccountUpdateForm(forms.ModelForm):
 	email = forms.CharField(max_length=60, widget = 
 	forms.TextInput(attrs={'type':'text', 'id':'email', 'class':'form-control', 'name':'email'}))
-
-	username = forms.CharField(max_length=60, widget = 
-	forms.TextInput(attrs={'type':'text', 'id':'user_name', 'class':'form-control', 'name':'username'}))
 
 	class Meta:
 		model = Account

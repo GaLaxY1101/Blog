@@ -11,28 +11,28 @@
                                 <div class="form-group row">
                                     <label for="email_address" class="col-md-4 col-form-label text-md-right">E-Mail Address</label>
                                     <div class="col-md-6">
-                                		{{registration_form.email}}
+                                		<input type="text" name="email" id="email"class='form-control'>
                                     </div>
                                 </div>
 
                                 <div class="form-group row">
                                     <label for="user_name" class="col-md-4 col-form-label text-md-right"> Username</label>
                                     <div class="col-md-6">
-                                    	{{registration_form.username}}
+                                    	<input type="text" name="username" id="user_name"class='form-control'>
                                     </div>
                                 </div>
 
                                 <div class="form-group row">
                                     <label for="phone_number" class="col-md-4 col-form-label text-md-right">Password</label>
                                     <div class="col-md-6">
-                                        {{registration_form.password1}}
+                                        <input type="pasword" name="password1" id="password1"class='form-control'>
                                     </div>
                                 </div>
 
                                 <div class="form-group row">
                                     <label for="phone_number" class="col-md-4 col-form-label text-md-right">Password confirmation</label>
                                     <div class="col-md-6">
-                                        {{registration_form.password2}}
+                                        <input type="pasword" name="password2" id="password2"class='form-control'>
                                     </div>
                                 </div>
                               	{% if registration_form.errors %}
