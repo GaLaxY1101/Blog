@@ -23,7 +23,7 @@ class BlogPost(models.Model):
 
 	def __str__(self):
 		return self.title
-
+# Удаляет изображение с локалки, если оно было удалено с сервера
 @receiver(post_delete, sender=BlogPost)
 def submission_delete(sender, instance, **kwargs):
     instance.image.delete(False) 
