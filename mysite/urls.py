@@ -27,6 +27,7 @@ from account.views import (
     logout_view,
     login_view,
     account_view,
+    must_autenticate_view,
 )
 
 from django.contrib.auth import views as auth_views # for reset password
@@ -38,6 +39,7 @@ urlpatterns = [
     path('logout/', logout_view, name = 'logout'),
     path('login/', login_view, name = 'login'),
     path('account/', account_view, name = 'account'),
+    path('must_autenticate/', must_autenticate_view, name = 'must_autenticate'),
     
     # Password reset links (ref: https://github.com/django/django/blob/master/django/contrib/auth/views.py)
     path('password_change/done/', auth_views.PasswordChangeDoneView.as_view(template_name='registration/password_change_done.html'), 
